@@ -83,6 +83,27 @@ namespace RentalHousingWebApp.DataAccessLayer
             return result;
         }
 
+        public List<string> readUser(string userName, string password, bool isEncrypted)
+        {
+            XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
+            var elements = from elem in xmlDoc.Elements("EndUsers").Elements("EndUser")
+                           where elem != null
+                           select elem;
+
+            List<string> result = new List<string>();
+
+            foreach (var e in elements)
+            {
+                if (e.Element("username").Value.Equals(userName) && e.Element("password").Value.Equals(password))
+                    result.Add(e.Attribute("isPasswordEncrypted").Value + ";" + e.Element("username").Value + ";" + e.Element("password").Value);
+            }
+
+           return result;
+            
+        }
+
+
+
         public bool addNewEndUser(string userName, string password, bool isEncrypted)
         {
             EndUser endUser = new EndUser(userName, password, isEncrypted);
