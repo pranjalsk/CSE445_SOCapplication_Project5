@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceDataAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceDataAccess_read_InputMessage">
+    <wsdl:part name="parameters" element="tns:read" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_read_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_readAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:readAll" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_readAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_createDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:createDB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_createDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_addNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNew" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_addNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_remove_InputMessage">
+    <wsdl:part name="parameters" element="tns:remove" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDataAccess_remove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceDataAccess">
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDataAccess/read" message="tns:IServiceDataAccess_read_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDataAccess/readResponse" message="tns:IServiceDataAccess_read_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDataAccess/readAll" message="tns:IServiceDataAccess_readAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDataAccess/readAllResponse" message="tns:IServiceDataAccess_readAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDataAccess/createDB" message="tns:IServiceDataAccess_createDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDataAccess/createDBResponse" message="tns:IServiceDataAccess_createDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDataAccess/addNew" message="tns:IServiceDataAccess_addNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDataAccess/addNewResponse" message="tns:IServiceDataAccess_addNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDataAccess/remove" message="tns:IServiceDataAccess_remove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDataAccess/removeResponse" message="tns:IServiceDataAccess_remove_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceDataAccess" type="tns:IServiceDataAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="read">
+      <soap:operation soapAction="http://tempuri.org/IServiceDataAccess/read" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readAll">
+      <soap:operation soapAction="http://tempuri.org/IServiceDataAccess/readAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDB">
+      <soap:operation soapAction="http://tempuri.org/IServiceDataAccess/createDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNew">
+      <soap:operation soapAction="http://tempuri.org/IServiceDataAccess/addNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <soap:operation soapAction="http://tempuri.org/IServiceDataAccess/remove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceDataAccess">
+    <wsdl:port name="BasicHttpBinding_IServiceDataAccess" binding="tns:BasicHttpBinding_IServiceDataAccess">
+      <soap:address location="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
