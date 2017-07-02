@@ -64,8 +64,8 @@ footer {
         <br />
         <br />
          <footer>
-                <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click"/>
-                <asp:Button ID="btn_landingPage" runat="server" Text="Landing Page" OnClick="btn_landingPage_Click"/>
+                <asp:Button ID="btn_logout" CssClass="btn btn-sm btn-primary" runat="server" Text="Logout" OnClick="btn_logout_Click"/>
+                <asp:Button ID="btn_landingPage" CssClass="btn btn-sm btn-primary" runat="server" Text="Landing Page" OnClick="btn_landingPage_Click"/>
       </footer>
 
 

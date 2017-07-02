@@ -16,10 +16,17 @@
     <h2 style="text-align:center">House Rental Application Login</h2>
     <div class="wrapper">
         <form class="form-signin container" runat="server">
+            <div>
+                <h4>Captcha Verification</h4>
+                <asp:Image ID="img_captchImg" runat="server" ImageAlign="AbsMiddle"/>
+                <input type="text" id="txt_imgText" class="form-control" runat="server" name="captchInput" placeholder="Type image text here" autofocus="" />
+                <asp:Button ID="btn_newImg" CssClass="btn btn-sm btn-primary btn-block wrapper1" runat="server" Text="New Image" OnClick="btn_newImg_Click"/>      
+            </div>
+
             <h4 class="form-signin-heading">User Login</h4>
             <input type="text" id="txt_userName" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_password" class="form-control" runat="server" name="password" placeholder="Password" />
-            <asp:Button ID="btn_login" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Login" OnClick="btn_login_Click" />
+            <asp:Button ID="btn_login" CssClass="btn btn-sm btn-primary btn-block wrapper1" runat="server" Text="Login" OnClick="btn_login_Click" />
             <asp:Label ID="lbl_userLogin" runat="server" Text=""></asp:Label>
             <br />
             <h4 class="form-signin-heading">Register New User</h4>
@@ -27,13 +34,13 @@
             <input type="text" id="txt_lastname" class="form-control" runat="server" name="lastname" placeholder="Lastname" autofocus="" />
             <input type="text" id="txt_registerUsername" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_registerPassword" class="form-control" runat="server" name="password" placeholder="Password" />
-            <asp:Button ID="btn_register" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Register" OnClick="btn_register_Click" />
+            <asp:Button ID="btn_register" CssClass="btn btn-sm btn-primary btn-block wrapper1" runat="server" Text="Register" OnClick="btn_register_Click" />
             <asp:Label ID="lbl_registerUser" runat="server" Text=""></asp:Label>
             <br />
             <h4 class="form-signin-heading">Staff Login</h4>
             <input type="text" id="txt_staffUsername" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_staffPassword" class="form-control" runat="server" name="password" placeholder="Password"/>
-            <asp:Button ID="btn_StaffLogin" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Staff Login" OnClick="btn_StaffLogin_Click"/>
+            <asp:Button ID="btn_StaffLogin" CssClass="btn btn-sm btn-primary btn-block wrapper1" runat="server" Text="Staff Login" OnClick="btn_StaffLogin_Click"/>
             <asp:Label ID="lbl_StaffLoginLabel" runat="server" Text=""></asp:Label>
         </form>
     </div>

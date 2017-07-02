@@ -13,7 +13,8 @@ namespace RentalHousingWebApp.PresentationLayer
     {
         UserCredentials ucd = new UserCredentials();
         StaffCredentials scd = new StaffCredentials();
-
+        imgServiceRef.ServiceClient myimgref = new imgServiceRef.ServiceClient();
+        String myStr;
         protected void Page_Load(object sender, EventArgs e)
         {
             string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/"; 
@@ -32,6 +33,10 @@ namespace RentalHousingWebApp.PresentationLayer
                     scd.setupStaffDB();                
                 }
                 Session["IsAlreadyLoad"] = true;
+                myStr = myimgref.GetVerifierString("5");
+                Session["generatedString"] = myStr;
+                img_captchImg.Visible = true;
+                img_captchImg.ImageUrl = "http://neptune.fulton.ad.asu.edu/WSRepository/Services/ImageVerifier/Service.svc/GetImage/" + myStr;
             }
         
         }
@@ -48,12 +53,20 @@ namespace RentalHousingWebApp.PresentationLayer
                 lbl_userLogin.Text = "Login Un-successful, try registering if new user";
             }
             else {
-                lbl_userLogin.Text = "Login Successfull--" + result;
-                string[] tokens = result.Split(';');
-                Session["username"] = tokens[0];
-                Session["password"] = tokens[1];
-                Session["role"] = "endUser";
-                Response.Redirect("UsersLandingPage.aspx");
+
+                if (imageVerifer())
+                {
+                    lbl_userLogin.Text = "Login Successfull--" + result;
+                    string[] tokens = result.Split(';');
+                    Session["username"] = tokens[0];
+                    Session["password"] = tokens[1];
+                    Session["role"] = "endUser";
+                    Response.Redirect("UsersLandingPage.aspx");
+                }
+                else
+                {
+                    lbl_userLogin.Text = "Please check captch!";
+                }
             }
         }
 
@@ -80,7 +93,7 @@ namespace RentalHousingWebApp.PresentationLayer
                    string lastname = txt_lastname.Value.ToString();
                    string username = txt_registerUsername.Value.ToString();
                    string password = txt_registerPassword.Value.ToString();
-                   bool isEncrypted = false;
+                   bool isEncrypted = true;
                    bool done = ucd.addNewEndUser(firstname,lastname,username,password,isEncrypted);
                    if (done)
                    {
@@ -107,29 +120,56 @@ namespace RentalHousingWebApp.PresentationLayer
             }
             if (!result.Any())
             {
-                lbl_StaffLoginLabel.Text = "Login Un-successful, PLeae check credentials";
+                lbl_StaffLoginLabel.Text = "Login Un-successful, Pleae check credentials";
             }
             else
             {
-                lbl_StaffLoginLabel.Text = "Login Success -- "+result;
-                string[] tokens = result.Split(';');
-                Session["username"] = tokens[1];
-                Session["password"] = tokens[2];
-                Session["role"] = tokens[0];
-                string role = Session["role"].ToString();
-                if (role.Equals("clerk"))
+                if (imageVerifer())
                 {
-                    Response.Redirect("StaffLandingPage.aspx");
-                }
-                else if (role.Equals("manager"))
-                {
-                    Response.Redirect("ManagerLandingPage.aspx");
+                    lbl_StaffLoginLabel.Text = "Login Success -- " + result;
+                    string[] tokens = result.Split(';');
+                    Session["username"] = tokens[1];
+                    Session["password"] = tokens[2];
+                    Session["role"] = tokens[0];
+                    string role = Session["role"].ToString();
+                    if (role.Equals("clerk"))
+                    {
+                        Response.Redirect("StaffLandingPage.aspx");
+                    }
+                    else if (role.Equals("manager"))
+                    {
+                        Response.Redirect("ManagerLandingPage.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("UserLoginPage.aspx");
+                    }
                 }
                 else {
-                    Response.Redirect("UserLoginPage.aspx");
+                    lbl_StaffLoginLabel.Text = "Please check captcha";
                 }
-
             }
+        }
+
+        public bool imageVerifer() {
+            if (Session["generatedString"].ToString().Equals(txt_imgText.Value.ToString()))
+            {
+                return true;   
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+       
+        protected void btn_newImg_Click(object sender, EventArgs e)
+        {
+            myStr = myimgref.GetVerifierString("5");
+            Session["generatedString"] = myStr;
+            img_captchImg.Visible = true;
+            img_captchImg.ImageUrl = "http://neptune.fulton.ad.asu.edu/WSRepository/Services/ImageVerifier/Service.svc/GetImage/" + myStr;
+          
         }
     }
 }

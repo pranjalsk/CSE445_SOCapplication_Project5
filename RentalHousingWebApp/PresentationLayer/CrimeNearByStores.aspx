@@ -24,6 +24,18 @@
             margin: 10px 10px 10px 10px;
             padding: 10px 10px 10px 10px;
         }
+        footer {
+    background: white;
+    color: black;
+    text-shadow: none;
+    opacity: 0.5;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 0.8em;
+}
     </style>
     <title>Crime Data & NearBy Stores</title>
 </head>
@@ -36,7 +48,7 @@
             <br />
             Enter zipcode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <input name="txtZipCode" maxlength="5" onkeypress="return isNumberKey(event)" type="text" id="txt_zipCode" runat="server" style="width: 150px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btn_crimeData" runat="server" Text="Get Crime Data" CssClass="btn btn-lg btn-primary wrapper" OnClick="btn_crimeData_Click"/>
+            <asp:Button ID="btn_crimeData" runat="server" Text="Get Crime Data" CssClass="btn btn-sm btn-primary wrapper" OnClick="btn_crimeData_Click"/>
             <br />
             <asp:Label ID="lbl_errormsg_crime" runat="server" Text="Label" Visible="False"></asp:Label>
 
@@ -128,7 +140,7 @@
             Longitude:
             <asp:Label ID="lbl_longitude" runat="server" Text="Longitude" Visible="False"></asp:Label>
             <br />
-            <asp:Button ID="btn_getStoresNearBy" CssClass="btn btn-lg btn-primary wrapper" runat="server" Text="Near By Stores" OnClick="btn_getStoresNearBy_Click"/>
+            <asp:Button ID="btn_getStoresNearBy" CssClass="btn btn-sm btn-primary wrapper" runat="server" Text="Near By Stores" OnClick="btn_getStoresNearBy_Click"/>
             <br />
             <textarea id="txtArea_NearByStores" class="wrapper" rows="8" style="width: 30%" readonly="readonly" runat="server"></textarea>
             <br />
@@ -138,8 +150,8 @@
         <br />
         <br />
          <footer>
-                <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click"/>
-                <asp:Button ID="btn_landingPage" runat="server" Text="Landing Page" OnClick="btn_landingPage_Click"/>
+                <asp:Button ID="btn_logout" CssClass="btn btn-sm btn-primary" runat="server" Text="Logout" OnClick="btn_logout_Click"/>
+                <asp:Button ID="btn_landingPage" CssClass="btn btn-sm btn-primary" runat="server" Text="Landing Page" OnClick="btn_landingPage_Click"/>
       </footer>
     </form>
 
