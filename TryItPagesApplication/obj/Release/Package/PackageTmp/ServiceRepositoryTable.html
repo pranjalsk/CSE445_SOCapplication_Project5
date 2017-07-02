@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Service Directory Table</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+
+    <table width="1250" border="1" cellspacing="0" cellpadding="2" class="table table-responsive" style="margin-top:10px">
+        <tr>
+            <td colspan="7" align="center"> ServiceDirectory: <a href="http://webstrar36.fulton.asu.edu">WEBSTRAR</a></td>
+        </tr>
+        <tr>
+            <td colspan="7" align="center">Project Name: Rental House Booking System</td>
+        </tr>
+        <tr>
+            <td colspan="7" align="center">Author Name: Pranjal Karankar</td>
+        </tr>
+        <tr align="center">
+            <td>Provider Name</td>
+            <td>Service Name</td>
+            <td>Input Type</td>
+            <td>Output Type</td>
+            <td>TryIt link</td>
+            <td>Service Description</td>
+            <td>Planned resources need to implement the service</td>
+        </tr>
+        <tr align="center">
+            <td>Pranjal Karankar</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page2/ServiceCrimeData.svc">Crime Data Service</a></td>
+            <td>Zipcode</td>
+            <td>Integer Array</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page0/TryItPart1.aspx">Try It</a></td>
+            <td>
+                Create a service that returns certain crime data for a given location. This data is given
+                in the form of integer array in the order as : Zip, ViolentCrime,MurderAndManslaughter,
+                ForcibleRape,Robbery,AggravatedAssault,PropertyCrime,Burglary,LarcenyTheft,MotorVehicleTheft
+            </td>
+            <td>
+                Implementended with the help of national crime data api at
+                <a href="https://azure.geodataservice.net/GeoDataService.svc/GetUSDemographics?includecrimedata=false&zipcode=85281
+">Geo Data Service</a>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>Pranjal Karankar</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page2/ServiceNearByStores.svc">Near By Stores</a></td>
+            <td>zip code, store type</td>
+            <td>string</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page0/TryItPart1.aspx">Try It</a></td>
+            <td>
+                A service which takes zip code and type of store as parameter. It returns a string containing
+                all the near by stores separated by comma
+            </td>
+            <td>Implemented with the help of google place finder api</td>
+        </tr>
+        <tr align="center">
+            <td>Pranjal Karankar</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page2/ServiceDataAccess.svc">Data Access and Manipulation</a></td>
+            <td>String</td>
+            <td>String</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page0/TryItPart2.aspx">Try It</a></td>
+            <td>Data Access Service can be used to manipulate [CRUD operations] data on dummy database which is a XML file</td>
+            <td>Developed using own logic to perform CRUD operaiton on XML file database</td>
+        </tr>
+
+        <tr align="center">
+            <td>Pranjal Karankar</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page1/ServiceValidation.svc">Credit card verification [Restful]</a></td>
+            <td>credit card number integer</td>
+            <td>valid or invalid string</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page0/TryItPart2.aspx">Try It</a></td>
+            <td>Analyze the credit card information with respect to its length and numeric nature and return its validity</td>
+            <td>Restful service, Written my own logic of Luhn Algorith</td>
+        </tr>
+        <tr align="center">
+            <td>Pranjal Karankar</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page2/ServiceDataAccess.svc">Contact/Email verifier [Restful]</a></td>
+            <td>string email</td>
+            <td>string</td>
+            <td><a href="http://webstrar36.fulton.asu.edu/page0/TryItPart2.aspx">Try It</a></td>
+            <td>
+                Created a restful service which will verify email address using the 3rd party API <a href="https://mailboxlayer.com/">mailboxlayer</a>
+                It returns XML string with information on different email verification parameters.
+            </td>
+            <td>Used 3rd party API, Written own logic to parse json string and compose xml string</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

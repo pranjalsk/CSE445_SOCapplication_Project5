@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2017 12:28:15</publishTime>
     </File>
     <File Include="bin/RentalHousingWebApp.dll">
-      <publishTime>07/02/2017 12:56:04</publishTime>
+      <publishTime>07/02/2017 14:03:57</publishTime>
     </File>
     <File Include="PresentationLayer/AddNewHouse.aspx">
       <publishTime>07/02/2017 11:02:46</publishTime>
@@ -40,7 +40,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/01/2017 14:52:41</publishTime>
     </File>
     <File Include="PresentationLayer/PublicPage.aspx">
-      <publishTime>07/02/2017 11:47:59</publishTime>
+      <publishTime>07/02/2017 13:55:45</publishTime>
     </File>
     <File Include="PresentationLayer/RemoveUsers.aspx">
       <publishTime>07/02/2017 11:02:26</publishTime>

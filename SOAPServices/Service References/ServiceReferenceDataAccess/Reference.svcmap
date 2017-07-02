@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a6a4cbf7-f3e2-48f0-be7e-98884917aa3d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceDataAccess.xsd" MetadataType="Schema" ID="470f6fa1-f8b4-4799-bf2e-0b94f97243c2" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceDataAccess1.xsd" MetadataType="Schema" ID="6e51ffb9-a4f8-4298-8bcc-648b4d08a832" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceDataAccess2.xsd" MetadataType="Schema" ID="0fb740fa-d6d4-4850-94a5-16351426f33a" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceDataAccess.wsdl" MetadataType="Wsdl" ID="e6d64cc9-0432-4c20-a205-53ee54c0ad9a" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceDataAccess.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

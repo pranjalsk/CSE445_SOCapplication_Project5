@@ -12,6 +12,11 @@ namespace EncryptoLibrary
     {
         byte[] seed = ASCIIEncoding.ASCII.GetBytes("cse44598");
         // A seed from a binary array for encryption. We could encrypt the seed to make it even more secure.
+        /// <summary>
+        /// Encryption function
+        /// </summary>
+        /// <param name="plainString"></param>
+        /// <returns></returns>
         public string Encrypt(string plainString)
         { // encryption using DES       
             if (String.IsNullOrEmpty(plainString))
@@ -30,6 +35,11 @@ namespace EncryptoLibrary
             return Convert.ToBase64String(mStream.GetBuffer(), 0, (int)mStream.Length);
         }
 
+        /// <summary>
+        /// Decryption function
+        /// </summary>
+        /// <param name="encryptedString"></param>
+        /// <returns></returns>
         public string Decrypt(string encryptedString)
         { // decryption using DES 
             if (String.IsNullOrEmpty(encryptedString))

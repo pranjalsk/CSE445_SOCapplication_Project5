@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d1c80f12-9dd2-45c0-a2e6-34d07dedf066" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar36.fulton.asu.edu/Page2/ServiceNearByStores.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceNearByStores.xsd" MetadataType="Schema" ID="e28dc8f2-7f7b-49da-a8e2-7b8b87806736" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceNearByStores.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceNearByStores.wsdl" MetadataType="Wsdl" ID="788bfecd-31ea-4210-8219-e192125fa15b" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceNearByStores.svc?wsdl" />
+    <MetadataFile FileName="ServiceNearByStores1.xsd" MetadataType="Schema" ID="b3c520a1-0a01-4def-a83e-5e11a99cad92" SourceId="1" SourceUrl="http://webstrar36.fulton.asu.edu/Page2/ServiceNearByStores.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

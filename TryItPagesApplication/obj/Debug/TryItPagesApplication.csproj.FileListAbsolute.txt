@@ -1,0 +1,6 @@
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\bin\TryItPagesApplication.dll.config
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\bin\TryItPagesApplication.dll
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\bin\TryItPagesApplication.pdb
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\obj\Debug\TryItPagesApplication.csprojResolveAssemblyReference.cache
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\obj\Debug\TryItPagesApplication.dll
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment3\TryItPagesApplication\obj\Debug\TryItPagesApplication.pdb

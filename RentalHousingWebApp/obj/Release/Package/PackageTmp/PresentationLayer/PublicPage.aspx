@@ -48,7 +48,8 @@
                             <p>
                                 <strong>Test Inputs for TA:</strong>    
                                 <br /><strong>User Login </strong> {username: "testUser1", password: "password"},{username: "testUser2", password: "password"}
-                                <br /><strong>Staff Login</strong> {username: "managerTest1", password: "password"}, {username: "clerkTest1", password: "password"},
+                                <br /><strong>Staff Login</strong> {username: "managerTest1", password: "password"},  {username: "managerTest2", password: "password"},{username: "clerkTest1", password: "password"},
+                                {username: "clerkTest2", password: "password"}, {username: "clerkTest3", password: "password"},
                                 <br /><strong>Register</strong> {Choose your own username and password, use that to login}
                             </p>
                         </div>

@@ -8,6 +8,12 @@ namespace RentalHousingWebApp.RemoteServiceLayer
 {
     public class NearByStoresAccess
     {
+        /// <summary>
+        /// Call google api to get nearby stores and return the result
+        /// </summary>
+        /// <param name="zip"></param>
+        /// <param name="storeType"></param>
+        /// <returns></returns>
         public string findNearestStore(string zip, string storeType)
         {
             ServiceReferenceWebToString.ServiceClient proxyWebToString = new ServiceReferenceWebToString.ServiceClient();
@@ -34,6 +40,11 @@ namespace RentalHousingWebApp.RemoteServiceLayer
             return result;
         }
 
+        /// <summary>
+        /// Get latitude longitude info from the google api
+        /// </summary>
+        /// <param name="zip"></param>
+        /// <returns></returns>
         public string getLatLong(string zip)
         {
             ServiceReferenceWebToString.ServiceClient proxyWebToString = new ServiceReferenceWebToString.ServiceClient();

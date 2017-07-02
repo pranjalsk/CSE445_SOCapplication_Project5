@@ -64,9 +64,10 @@ namespace RentalHousingWebApp.DataAccessLayer
     {
         String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
        // string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
-        /*
-         * create user object...create xml file...crud operations
-         */
+        
+        /// <summary>
+        /// setup initial users db
+        /// </summary>
         public void setupEndUserDB() { 
 
             //encrypted string for "password" 
@@ -90,6 +91,10 @@ namespace RentalHousingWebApp.DataAccessLayer
             xmldoc.Save(path + @"\EndUsers.xml");
         }
 
+        /// <summary>
+        /// read all users
+        /// </summary>
+        /// <returns></returns>
         public List<string> readAllEndUsers()
         {
             XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
@@ -106,6 +111,13 @@ namespace RentalHousingWebApp.DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Read a particular user
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="isEncrypted"></param>
+        /// <returns></returns>
         public List<string> readUser(string userName, string password, bool isEncrypted)
         {
             XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
@@ -125,7 +137,15 @@ namespace RentalHousingWebApp.DataAccessLayer
             
         }
 
-
+        /// <summary>
+        /// Add new user
+        /// </summary>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="isEncrypted"></param>
+        /// <returns></returns>
         public bool addNewEndUser(string firstname, string lastname, string userName, string password, bool isEncrypted)
         {
             EndUser endUser = new EndUser(firstname, lastname,userName, password, isEncrypted);
@@ -142,6 +162,15 @@ namespace RentalHousingWebApp.DataAccessLayer
             return true;
         }
 
+        /// <summary>
+        /// remove exisitng user
+        /// </summary>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="isEncrypted"></param>
+        /// <returns></returns>
         public bool removeEndUser(string firstname, string lastname, string userName, string password, bool isEncrypted)
         {
             EndUser endUser = new EndUser(firstname,lastname,userName, password, isEncrypted);
@@ -160,6 +189,11 @@ namespace RentalHousingWebApp.DataAccessLayer
             return true;
         }
 
+        /// <summary>
+        /// remove end user by  usernames
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
         public bool removeEndUserByName(string userName)
         {
             

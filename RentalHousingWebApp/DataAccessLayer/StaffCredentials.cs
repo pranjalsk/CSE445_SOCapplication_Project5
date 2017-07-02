@@ -46,6 +46,9 @@ namespace RentalHousingWebApp.DataAccessLayer
         String staffXmlpath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
        // string staffXmlpath = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
 
+        /// <summary>
+        /// Setup the initial staff db
+        /// </summary>
         public void setupStaffDB()
         {
             StaffMember[] staffMembers = new StaffMember[]{
@@ -69,6 +72,10 @@ namespace RentalHousingWebApp.DataAccessLayer
             xmldoc.Save(staffXmlpath + @"\StaffMembers.xml");
         }
 
+        /// <summary>
+        /// Read all staff members
+        /// </summary>
+        /// <returns></returns>
         public List<string> readAllStaffMembers()
         {
             XDocument xmlDoc = XDocument.Load(staffXmlpath + @"\StaffMembers.xml");
@@ -85,6 +92,12 @@ namespace RentalHousingWebApp.DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// read aparticular staff member
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public List<string> readStaffMember(string userName, string password)
         {
             XDocument xmlDoc = XDocument.Load(staffXmlpath + @"\StaffMembers.xml");
@@ -102,6 +115,13 @@ namespace RentalHousingWebApp.DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// remove staff member
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public bool removeStaffMember(string userName, string password, string role)
         {
             StaffMember stfmem = new StaffMember(userName, password, role);
