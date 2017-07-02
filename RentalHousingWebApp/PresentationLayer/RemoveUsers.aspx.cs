@@ -16,7 +16,12 @@ namespace RentalHousingWebApp.PresentationLayer
         string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
 
         protected void Page_Load(object sender, EventArgs e)
-        {      
+        {
+            if (string.IsNullOrEmpty(Session["username"] as string) || string.IsNullOrEmpty(Session["role"] as string))
+            {
+                Response.Redirect("UserLoginPage.aspx");
+            }
+
             if (!IsPostBack && Session["IsAlreadyLoaded"] == null)
             {
                 if (Session["role"].ToString().Equals("manager"))

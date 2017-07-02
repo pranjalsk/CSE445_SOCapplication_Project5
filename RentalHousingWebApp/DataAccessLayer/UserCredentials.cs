@@ -68,9 +68,11 @@ namespace RentalHousingWebApp.DataAccessLayer
          * create user object...create xml file...crud operations
          */
         public void setupEndUserDB() { 
+
+            //encrypted string for "password" 
             EndUser [] endUsers = new EndUser[]{
-                new EndUser("test","user1","testUser1","password",false),
-                new EndUser("test","user2","testUser2","password",false)
+                new EndUser("test","user1","testUser1","pYyzmOe/wmh5Rpu+dwwK8Q==",true),
+                new EndUser("test","user2","testUser2","pYyzmOe/wmh5Rpu+dwwK8Q==",true)
             };
 
             IEnumerable<XElement> xml = from endUser in endUsers

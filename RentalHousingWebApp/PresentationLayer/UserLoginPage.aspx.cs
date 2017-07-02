@@ -56,20 +56,13 @@ namespace RentalHousingWebApp.PresentationLayer
             }
             else {
 
-                if (imageVerifer())
-                {
                     lbl_userLogin.Text = "Login Successfull--" + result;
                     string[] tokens = result.Split(';');
                     Session["username"] = tokens[0];
                     string passDecrpt = new EncryptoDecrypto().decrypto(tokens[1]);
                     Session["password"] = passDecrpt;
                     Session["role"] = "endUser";
-                    Response.Redirect("UsersLandingPage.aspx");
-                }
-                else
-                {
-                    lbl_userLogin.Text = "Please check captch!";
-                }
+                    Response.Redirect("UsersLandingPage.aspx");             
             }
         }
 
@@ -135,9 +128,7 @@ namespace RentalHousingWebApp.PresentationLayer
                 lbl_StaffLoginLabel.Text = "Login Un-successful, Pleae check credentials";
             }
             else
-            {
-                if (imageVerifer())
-                {
+            {              
                     lbl_StaffLoginLabel.Text = "Login Success -- " + result;
                     string[] tokens = result.Split(';');
                     Session["username"] = tokens[1];
@@ -156,10 +147,6 @@ namespace RentalHousingWebApp.PresentationLayer
                     {
                         Response.Redirect("UserLoginPage.aspx");
                     }
-                }
-                else {
-                    lbl_StaffLoginLabel.Text = "Please check captcha";
-                }
             }
         }
 

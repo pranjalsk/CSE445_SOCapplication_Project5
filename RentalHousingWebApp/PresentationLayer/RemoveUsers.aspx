@@ -51,7 +51,7 @@ footer {
                 <br />
             </div>
             <div>
-                <asp:Button ID="btn_removeNow" CssClass="btn btn-lg btn-primary wrapper" runat="server" Text="Remove This User" OnClick="btn_removeNow_Click"/><br />
+                <asp:Button ID="btn_removeNow" CssClass="btn btn-sm btn-primary wrapper" runat="server" Text="Remove This User" OnClick="btn_removeNow_Click"/><br />
                 <asp:Label ID="lbl_RemoveSuccessMsg" runat="server" Text="-"></asp:Label><br />
                 <textarea id="txt_UsersAfterRemoval" runat="server" cols="50" rows="4" placeholder="Users remaining after removal" readonly="readonly"></textarea>
             </div>

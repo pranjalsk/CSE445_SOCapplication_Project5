@@ -1,33 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EndUsers>
-  <EndUser isPasswordEncrypted="false">
+  <EndUser isPasswordEncrypted="true">
     <username>testUser1</username>
-    <password>password</password>
+    <password>pYyzmOe/wmh5Rpu+dwwK8Q==</password>
     <firstname>test</firstname>
     <lastname>user1</lastname>
   </EndUser>
-  <EndUser isPasswordEncrypted="false">
+  <EndUser isPasswordEncrypted="true">
     <username>testUser2</username>
-    <password>password</password>
+    <password>pYyzmOe/wmh5Rpu+dwwK8Q==</password>
     <firstname>test</firstname>
     <lastname>user2</lastname>
-  </EndUser>
-  <EndUser isPasswordEncrypted="true">
-    <username>testUser5</username>
-    <password>QpyZV3pGWcI=</password>
-    <firstname>test</firstname>
-    <lastname>User5</lastname>
-  </EndUser>
-  <EndUser isPasswordEncrypted="true">
-    <username>testUser6</username>
-    <password>QpyZV3pGWcI=</password>
-    <firstname>test</firstname>
-    <lastname>User6</lastname>
-  </EndUser>
-  <EndUser isPasswordEncrypted="true">
-    <username>testUser7</username>
-    <password>wphKbxzZtwc=</password>
-    <firstname>test</firstname>
-    <lastname>User7</lastname>
   </EndUser>
 </EndUsers>

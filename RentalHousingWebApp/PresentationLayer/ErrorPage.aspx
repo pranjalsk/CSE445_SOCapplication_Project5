@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
     <div>
         <h1>Access Denied!</h1>
+        <a href="UserLoginPage.aspx">Go to login Page</a>
     </div>
     </form>
 </body>

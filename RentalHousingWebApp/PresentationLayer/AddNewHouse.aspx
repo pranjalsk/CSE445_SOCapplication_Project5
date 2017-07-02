@@ -56,7 +56,7 @@ footer {
                 <br />
             </div>
             <div>
-                <asp:Button ID="btn_AddNow" CssClass="btn btn-lg btn-primary wrapper" runat="server" Text="Add House" OnClick="btn_AddNow_Click"/><br />
+                <asp:Button ID="btn_AddNow" CssClass="btn btn-sm btn-primary wrapper" runat="server" Text="Add House" OnClick="btn_AddNow_Click"/><br />
                 <asp:Label ID="lbl_AdditionSuccessMsg" runat="server" Text="-"></asp:Label><br />
                 <textarea id="txt_HousesAfterAddition" runat="server" cols="50" rows="4" placeholder="Houses remaining after booking" readonly="readonly"></textarea>
             </div>
