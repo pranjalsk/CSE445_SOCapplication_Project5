@@ -19,15 +19,23 @@ namespace RentalHousingWebApp.PresentationLayer
         {      
             if (!IsPostBack && Session["IsAlreadyLoaded"] == null)
             {
-                if (!File.Exists(path + @"\EndUsers.xml"))
+                if (Session["role"].ToString().Equals("manager"))
                 {
-                    ucd.setupEndUserDB();
+                    if (!File.Exists(path + @"\EndUsers.xml"))
+                    {
+                        ucd.setupEndUserDB();
+                    }
+                    if (!File.Exists(path + @"\StaffMembers.xml"))
+                    {
+                        scd.setupStaffDB();
+                    }
+                    Session["IsAlreadyLoaded"] = true;
                 }
-                if (!File.Exists(path + @"\StaffMembers.xml"))
+                else
                 {
-                    scd.setupStaffDB();
+                    Response.Redirect("ErrorPage.aspx");
                 }
-                Session["IsAlreadyLoaded"] = true;
+
             }
         }
 

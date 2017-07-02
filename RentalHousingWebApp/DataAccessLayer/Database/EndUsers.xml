@@ -12,10 +12,10 @@
     <firstname>test</firstname>
     <lastname>user2</lastname>
   </EndUser>
-  <EndUser isPasswordEncrypted="false">
-    <username>testUser3</username>
-    <password>password</password>
+  <EndUser isPasswordEncrypted="true">
+    <username>testUser5</username>
+    <password>QpyZV3pGWcI=</password>
     <firstname>test</firstname>
-    <lastname>User3</lastname>
+    <lastname>User5</lastname>
   </EndUser>
 </EndUsers>

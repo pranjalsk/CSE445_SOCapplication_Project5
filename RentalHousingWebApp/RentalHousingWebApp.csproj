@@ -38,8 +38,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EncryptionLibrary">
-      <HintPath>..\EncryptionLibrary\bin\Debug\EncryptionLibrary.dll</HintPath>
+    <Reference Include="EncryptoLibrary">
+      <HintPath>..\EncryptoLibrary\bin\Debug\EncryptoLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />

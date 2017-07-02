@@ -1,6 +1,0 @@
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\bin\Debug\EncryptionLibrary.dll.config
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\bin\Debug\EncryptionLibrary.dll
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\bin\Debug\EncryptionLibrary.pdb
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\obj\Debug\EncryptionLibrary.csprojResolveAssemblyReference.cache
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\obj\Debug\EncryptionLibrary.dll
-C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\EncryptionLibrary\obj\Debug\EncryptionLibrary.pdb

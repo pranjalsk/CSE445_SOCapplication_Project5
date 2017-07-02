@@ -59,7 +59,8 @@ namespace RentalHousingWebApp.PresentationLayer
                     lbl_userLogin.Text = "Login Successfull--" + result;
                     string[] tokens = result.Split(';');
                     Session["username"] = tokens[0];
-                    Session["password"] = tokens[1];
+                    string passDecrpt = new EncryptoLibrary.CryptoClass().decrypto(tokens[1]);
+                    Session["password"] = passDecrpt;
                     Session["role"] = "endUser";
                     Response.Redirect("UsersLandingPage.aspx");
                 }
@@ -72,7 +73,8 @@ namespace RentalHousingWebApp.PresentationLayer
 
         public string getUsers(string username, string password, bool isEncrypted) {         
                 string output = "";
-                List<string> result = ucd.readUser(username, password, false);
+                string passEncrpt = new EncryptoLibrary.CryptoClass().encrypto(password);
+                List<string> result = ucd.readUser(username, passEncrpt, true);
                 foreach (string str in result)
                 {
                     output += str;
@@ -88,17 +90,25 @@ namespace RentalHousingWebApp.PresentationLayer
                 List<string> result = ucd.readUser(txt_registerUsername.Value.ToString(), txt_registerPassword.Value.ToString(), false);
                 if (!result.Any())
                 {
-                   //If non exisitng user, add new user
-                   string firstname = txt_firstname.Value.ToString();
-                   string lastname = txt_lastname.Value.ToString();
-                   string username = txt_registerUsername.Value.ToString();
-                   string password = txt_registerPassword.Value.ToString();
-                   bool isEncrypted = true;
-                   bool done = ucd.addNewEndUser(firstname,lastname,username,password,isEncrypted);
-                   if (done)
-                   {
-                       lbl_registerUser.Text = "Registration successful, Please use details to log in!";
-                   }
+                    if (imageVerifer())
+                    {   //If non exisitng user, add new user
+                        string firstname = txt_firstname.Value.ToString();
+                        string lastname = txt_lastname.Value.ToString();
+                        string username = txt_registerUsername.Value.ToString();
+                        string password = txt_registerPassword.Value.ToString();
+                        string passEncrp = new EncryptoLibrary.CryptoClass().encrypto(password);
+                        bool isEncrypted = true;
+                        bool done = ucd.addNewEndUser(firstname, lastname, username, passEncrp, isEncrypted);
+                        if (done)
+                        {
+                            lbl_registerUser.Text = "Registration successful, Please use details to log in!";
+                        }    
+                    }
+                    else
+                    {
+                        lbl_registerUser.Text = "Please check captcha!";
+                    }
+
                 }
                 else {
                   lbl_registerUser.Text = "Already a user? Please Login";
