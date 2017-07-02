@@ -91,6 +91,10 @@ namespace RentalHousingWebApp.PresentationLayer
                     }
                     lbl_BookingSuccessMsg.Text = "Booking successful";
                 }
+                else
+                {
+                    lbl_BookingSuccessMsg.Text = "Booking failed, please check your inputs";
+                }
             }
         }
 

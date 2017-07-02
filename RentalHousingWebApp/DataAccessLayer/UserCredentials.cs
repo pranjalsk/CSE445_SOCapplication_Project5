@@ -62,8 +62,8 @@ namespace RentalHousingWebApp.DataAccessLayer
 
     public class UserCredentials
     {
-       // String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
+        String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+       // string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
         /*
          * create user object...create xml file...crud operations
          */

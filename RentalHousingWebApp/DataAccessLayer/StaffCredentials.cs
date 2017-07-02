@@ -43,8 +43,8 @@ namespace RentalHousingWebApp.DataAccessLayer
     
     public class StaffCredentials
     {
-       // String staffXmlpath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string staffXmlpath = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
+        String staffXmlpath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+       // string staffXmlpath = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
 
         public void setupStaffDB()
         {

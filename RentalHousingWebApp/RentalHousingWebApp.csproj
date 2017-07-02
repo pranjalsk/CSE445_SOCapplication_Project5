@@ -62,6 +62,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\RentalApp.pubxml" />
     <None Include="Service References\imgServiceRef\Service.wsdl" />
     <None Include="Service References\imgServiceRef\Service.xsd">
       <SubType>Designer</SubType>
@@ -105,13 +106,17 @@
     </None>
     <Content Include="PresentationLayer\AddNewHouse.aspx" />
     <Content Include="PresentationLayer\assets\css\LandingPageStyle.css" />
+    <Content Include="PresentationLayer\assets\css\publicPageStyle.css" />
     <Content Include="PresentationLayer\assets\css\UserLoginStyle.css" />
+    <Content Include="PresentationLayer\assets\js\publicPageJs.js" />
     <Content Include="PresentationLayer\CrimeNearByStores.aspx" />
     <Content Include="PresentationLayer\ErrorPage.aspx" />
     <Content Include="PresentationLayer\ManagerLandingPage.aspx" />
     <Content Include="PresentationLayer\PublicPage.aspx" />
     <Content Include="PresentationLayer\RemoveUsers.aspx" />
+    <Content Include="PresentationLayer\ServiceDirectory.aspx" />
     <Content Include="PresentationLayer\StaffLandingPage.aspx" />
+    <Content Include="PresentationLayer\TryItEncryptionDLL.aspx" />
     <Content Include="PresentationLayer\UserLoginPage.aspx" />
     <Content Include="PresentationLayer\UsersLandingPage.aspx" />
     <Content Include="PresentationLayer\ViewHouseListing.aspx" />
@@ -177,12 +182,26 @@
     <Compile Include="PresentationLayer\RemoveUsers.aspx.designer.cs">
       <DependentUpon>RemoveUsers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ServiceDirectory.aspx.cs">
+      <DependentUpon>ServiceDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDirectory.aspx.designer.cs">
+      <DependentUpon>ServiceDirectory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\StaffLandingPage.aspx.cs">
       <DependentUpon>StaffLandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PresentationLayer\StaffLandingPage.aspx.designer.cs">
       <DependentUpon>StaffLandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\TryItEncryptionDLL.aspx.cs">
+      <DependentUpon>TryItEncryptionDLL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\TryItEncryptionDLL.aspx.designer.cs">
+      <DependentUpon>TryItEncryptionDLL.aspx</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\UserLoginPage.aspx.cs">
       <DependentUpon>UserLoginPage.aspx</DependentUpon>
@@ -227,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccessLayer\Database\" />
-    <Folder Include="PresentationLayer\assets\js\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

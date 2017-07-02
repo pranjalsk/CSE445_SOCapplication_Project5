@@ -14,12 +14,14 @@ namespace RentalHousingWebApp.PresentationLayer
     {
         UserCredentials ucd = new UserCredentials();
         StaffCredentials scd = new StaffCredentials();
+        string path;
    
         imgServiceRef.ServiceClient myimgref = new imgServiceRef.ServiceClient();
         String myStr;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/"; 
+          //  string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/"; 
+            path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
             Session["username"] = "";
             Session["password"] = "";

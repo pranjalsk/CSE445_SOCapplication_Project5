@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\pranj\Desktop\Publish Web App</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EncryptoLibrary.dll">
+      <publishTime>07/02/2017 12:28:15</publishTime>
+    </File>
+    <File Include="bin/RentalHousingWebApp.dll">
+      <publishTime>07/02/2017 12:56:04</publishTime>
+    </File>
+    <File Include="PresentationLayer/AddNewHouse.aspx">
+      <publishTime>07/02/2017 11:02:46</publishTime>
+    </File>
+    <File Include="PresentationLayer/assets/css/LandingPageStyle.css">
+      <publishTime>07/01/2017 13:51:41</publishTime>
+    </File>
+    <File Include="PresentationLayer/assets/css/publicPageStyle.css">
+      <publishTime>07/02/2017 11:22:40</publishTime>
+    </File>
+    <File Include="PresentationLayer/assets/css/UserLoginStyle.css">
+      <publishTime>07/01/2017 18:09:20</publishTime>
+    </File>
+    <File Include="PresentationLayer/assets/js/publicPageJs.js">
+      <publishTime>07/02/2017 11:19:20</publishTime>
+    </File>
+    <File Include="PresentationLayer/CrimeNearByStores.aspx">
+      <publishTime>07/01/2017 19:25:52</publishTime>
+    </File>
+    <File Include="PresentationLayer/ErrorPage.aspx">
+      <publishTime>07/02/2017 11:00:38</publishTime>
+    </File>
+    <File Include="PresentationLayer/ManagerLandingPage.aspx">
+      <publishTime>07/01/2017 14:52:41</publishTime>
+    </File>
+    <File Include="PresentationLayer/PublicPage.aspx">
+      <publishTime>07/02/2017 11:47:59</publishTime>
+    </File>
+    <File Include="PresentationLayer/RemoveUsers.aspx">
+      <publishTime>07/02/2017 11:02:26</publishTime>
+    </File>
+    <File Include="PresentationLayer/ServiceDirectory.aspx">
+      <publishTime>07/02/2017 12:55:42</publishTime>
+    </File>
+    <File Include="PresentationLayer/StaffLandingPage.aspx">
+      <publishTime>07/01/2017 14:53:16</publishTime>
+    </File>
+    <File Include="PresentationLayer/TryItEncryptionDLL.aspx">
+      <publishTime>07/02/2017 12:16:26</publishTime>
+    </File>
+    <File Include="PresentationLayer/UserLoginPage.aspx">
+      <publishTime>07/02/2017 13:06:21</publishTime>
+    </File>
+    <File Include="PresentationLayer/UsersLandingPage.aspx">
+      <publishTime>07/01/2017 16:29:18</publishTime>
+    </File>
+    <File Include="PresentationLayer/ViewHouseListing.aspx">
+      <publishTime>07/01/2017 19:25:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/02/2017 12:35:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

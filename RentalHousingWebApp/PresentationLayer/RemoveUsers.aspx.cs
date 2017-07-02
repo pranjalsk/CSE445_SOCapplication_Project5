@@ -13,7 +13,8 @@ namespace RentalHousingWebApp.PresentationLayer
     {
         UserCredentials ucd = new UserCredentials();
         StaffCredentials scd = new StaffCredentials();
-        string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
+       // string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
+        string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         protected void Page_Load(object sender, EventArgs e)
         {
