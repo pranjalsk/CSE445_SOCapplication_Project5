@@ -4,3 +4,9 @@ C:\Users\pranj\Downloads\C#WorkSpace\Assignment_5\RentalHousingWebApp\bin\Rental
 C:\Users\pranj\Downloads\C#WorkSpace\Assignment_5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.csprojResolveAssemblyReference.cache
 C:\Users\pranj\Downloads\C#WorkSpace\Assignment_5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.dll
 C:\Users\pranj\Downloads\C#WorkSpace\Assignment_5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.pdb
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\bin\RentalHousingWebApp.dll.config
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\bin\RentalHousingWebApp.dll
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\bin\RentalHousingWebApp.pdb
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.csprojResolveAssemblyReference.cache
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.dll
+C:\Users\pranj\Downloads\C#WorkSpace\Assignment5\RentalHousingWebApp\obj\Debug\RentalHousingWebApp.pdb

@@ -36,7 +36,7 @@
             <br />
             Enter zipcode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <input name="txtZipCode" maxlength="5" onkeypress="return isNumberKey(event)" type="text" id="txt_zipCode" runat="server" style="width: 150px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btn_crimeData" runat="server" Text="Get Crime Data" CssClass="btn btn-lg btn-primary wrapper"/>
+            <asp:Button ID="btn_crimeData" runat="server" Text="Get Crime Data" CssClass="btn btn-lg btn-primary wrapper" OnClick="btn_crimeData_Click"/>
             <br />
             <asp:Label ID="lbl_errormsg_crime" runat="server" Text="Label" Visible="False"></asp:Label>
 
@@ -128,16 +128,22 @@
             Longitude:
             <asp:Label ID="lbl_longitude" runat="server" Text="Longitude" Visible="False"></asp:Label>
             <br />
-            <asp:Button ID="btn_getStoresNearBy" CssClass="btn btn-lg btn-primary wrapper" runat="server" Text="Near By Stores"/>
+            <asp:Button ID="btn_getStoresNearBy" CssClass="btn btn-lg btn-primary wrapper" runat="server" Text="Near By Stores" OnClick="btn_getStoresNearBy_Click"/>
             <br />
-            <textarea id="txtArea_NearByStores" class="wrapper" rows="4" style="width: 30%" readonly="readonly" runat="server"></textarea>
+            <textarea id="txtArea_NearByStores" class="wrapper" rows="8" style="width: 30%" readonly="readonly" runat="server"></textarea>
             <br />
             <asp:Label ID="lbl_errorMsg" runat="server" Text="Label" Visible="False"></asp:Label>
 
         </div>
-
-
-
+        <br />
+        <br />
+         <footer>
+                <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click"/>
+                <asp:Button ID="btn_landingPage" runat="server" Text="Landing Page" OnClick="btn_landingPage_Click"/>
+      </footer>
     </form>
+
+   
+
 </body>
 </html>

@@ -8,6 +8,22 @@ namespace RentalHousingWebApp.DataAccessLayer
 {
     public class EndUser{
 
+        private string _firstname;
+
+        public string Firstname
+        {
+            get { return _firstname; }
+            set { _firstname = value; }
+        }
+
+        private string _lastName;
+
+        public string Lastname
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
+        
         private bool _passwordEncrypted;
 
         public bool PasswordEncrypted
@@ -34,7 +50,9 @@ namespace RentalHousingWebApp.DataAccessLayer
 
         public EndUser() { }
 
-        public EndUser(string userName, string password, bool isEncrypted) {
+        public EndUser(string firstname,string lastname, string userName, string password, bool isEncrypted) {
+            this._firstname = firstname;
+            this._lastName = lastname;
             this._userName = userName;
             this._password = password;
             this._passwordEncrypted = isEncrypted;
@@ -44,21 +62,24 @@ namespace RentalHousingWebApp.DataAccessLayer
 
     public class UserCredentials
     {
-        String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+       // String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/";
         /*
          * create user object...create xml file...crud operations
          */
         public void setupEndUserDB() { 
             EndUser [] endUsers = new EndUser[]{
-                new EndUser("testUser1","password",false),
-                new EndUser("testUser2","password",false)
+                new EndUser("test","user1","testUser1","password",false),
+                new EndUser("test","user2","testUser2","password",false)
             };
 
             IEnumerable<XElement> xml = from endUser in endUsers
                                         select new XElement(
                                                 "EndUser", new XAttribute("isPasswordEncrypted", endUser.PasswordEncrypted),
                                                 new XElement("username", endUser.UserName),
-                                                new XElement("password", endUser.Password)
+                                                new XElement("password", endUser.Password),
+                                                new XElement("firstname", endUser.Firstname),
+                                                new XElement("lastname", endUser.Lastname)
                                             );
 
             //create new xml doument
@@ -78,7 +99,7 @@ namespace RentalHousingWebApp.DataAccessLayer
 
             foreach (var e in elements)
             {
-                result.Add(e.Attribute("isPasswordEncrypted").Value + ";" + e.Element("username").Value + ";" + e.Element("password").Value);
+                result.Add(e.Element("username").Value + ";" + e.Element("password").Value);
             }
             return result;
         }
@@ -95,7 +116,7 @@ namespace RentalHousingWebApp.DataAccessLayer
             foreach (var e in elements)
             {
                 if (e.Element("username").Value.Equals(userName) && e.Element("password").Value.Equals(password))
-                    result.Add(e.Attribute("isPasswordEncrypted").Value + ";" + e.Element("username").Value + ";" + e.Element("password").Value);
+                    result.Add(e.Element("username").Value + ";" + e.Element("password").Value);
             }
 
            return result;
@@ -103,24 +124,25 @@ namespace RentalHousingWebApp.DataAccessLayer
         }
 
 
-
-        public bool addNewEndUser(string userName, string password, bool isEncrypted)
+        public bool addNewEndUser(string firstname, string lastname, string userName, string password, bool isEncrypted)
         {
-            EndUser endUser = new EndUser(userName, password, isEncrypted);
+            EndUser endUser = new EndUser(firstname, lastname,userName, password, isEncrypted);
             XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
             xmlDoc.Elements("EndUsers").First().Add(
                     new XElement("EndUser", new XAttribute("isPasswordEncrypted", endUser.PasswordEncrypted),
                     new XElement("username", endUser.UserName),
-                    new XElement("password", endUser.Password)
+                    new XElement("password", endUser.Password),
+                    new XElement("firstname", endUser.Firstname),
+                    new XElement("lastname", endUser.Lastname)
                     )
                 );
             xmlDoc.Save(path + @"\EndUsers.xml");
             return true;
         }
 
-        public bool removeEndUser(string userName, string password, bool isEncrypted)
+        public bool removeEndUser(string firstname, string lastname, string userName, string password, bool isEncrypted)
         {
-            EndUser endUser = new EndUser(userName, password, isEncrypted);
+            EndUser endUser = new EndUser(firstname,lastname,userName, password, isEncrypted);
             XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
             var elementToDelete = from elem in xmlDoc.Elements("EndUsers").Elements("EndUser")
                                   where elem != null &&
@@ -136,6 +158,21 @@ namespace RentalHousingWebApp.DataAccessLayer
             return true;
         }
 
+        public bool removeEndUserByName(string userName)
+        {
+            
+            XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
+            var elementToDelete = from elem in xmlDoc.Elements("EndUsers").Elements("EndUser")
+                                  where elem != null &&
+                                        elem.Element("username").Value.Equals(userName)
+                                  select elem;
 
+            foreach (var e in elementToDelete)
+            {
+                e.Remove();
+            }
+            xmlDoc.Save(path + @"\EndUsers.xml");
+            return true;
+        }
     }
 }

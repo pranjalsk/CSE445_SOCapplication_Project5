@@ -20,16 +20,21 @@
             <input type="text" id="txt_userName" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_password" class="form-control" runat="server" name="password" placeholder="Password" />
             <asp:Button ID="btn_login" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Login" OnClick="btn_login_Click" />
+            <asp:Label ID="lbl_userLogin" runat="server" Text=""></asp:Label>
             <br />
             <h4 class="form-signin-heading">Register New User</h4>
+            <input type="text" id="txt_firstname" class="form-control" runat="server" name="firstname" placeholder="Firstname" autofocus="" />
+            <input type="text" id="txt_lastname" class="form-control" runat="server" name="lastname" placeholder="Lastname" autofocus="" />
             <input type="text" id="txt_registerUsername" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_registerPassword" class="form-control" runat="server" name="password" placeholder="Password" />
             <asp:Button ID="btn_register" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Register" OnClick="btn_register_Click" />
+            <asp:Label ID="lbl_registerUser" runat="server" Text=""></asp:Label>
             <br />
             <h4 class="form-signin-heading">Staff Login</h4>
             <input type="text" id="txt_staffUsername" class="form-control" runat="server" name="username" placeholder="username" autofocus="" />
             <input type="password" id="txt_staffPassword" class="form-control" runat="server" name="password" placeholder="Password"/>
-            <asp:Button ID="btn_StaffLogin" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Staff Login"/>
+            <asp:Button ID="btn_StaffLogin" CssClass="btn btn-lg btn-primary btn-block wrapper1" runat="server" Text="Staff Login" OnClick="btn_StaffLogin_Click"/>
+            <asp:Label ID="lbl_StaffLoginLabel" runat="server" Text=""></asp:Label>
         </form>
     </div>
 </body>

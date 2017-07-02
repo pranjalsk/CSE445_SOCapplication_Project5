@@ -9,7 +9,9 @@ namespace RentalHousingWebApp.RemoteServiceLayer
     {
         ServiceReferenceHousingData.ServiceDataAccessClient housingProxy = new ServiceReferenceHousingData.ServiceDataAccessClient();
 
-        public HousingServiceAccess() {
+        public HousingServiceAccess() { }
+
+        public void setupHousingDb() {
             housingProxy.createDB();
         }
 

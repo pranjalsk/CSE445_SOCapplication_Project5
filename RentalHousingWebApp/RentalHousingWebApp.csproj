@@ -90,9 +90,14 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="PresentationLayer\AddNewHouse.aspx" />
+    <Content Include="PresentationLayer\assets\css\LandingPageStyle.css" />
     <Content Include="PresentationLayer\assets\css\UserLoginStyle.css" />
     <Content Include="PresentationLayer\CrimeNearByStores.aspx" />
+    <Content Include="PresentationLayer\ErrorPage.aspx" />
+    <Content Include="PresentationLayer\ManagerLandingPage.aspx" />
     <Content Include="PresentationLayer\PublicPage.aspx" />
+    <Content Include="PresentationLayer\RemoveUsers.aspx" />
     <Content Include="PresentationLayer\StaffLandingPage.aspx" />
     <Content Include="PresentationLayer\UserLoginPage.aspx" />
     <Content Include="PresentationLayer\UsersLandingPage.aspx" />
@@ -109,6 +114,13 @@
   <ItemGroup>
     <Compile Include="DataAccessLayer\StaffCredentials.cs" />
     <Compile Include="DataAccessLayer\UserCredentials.cs" />
+    <Compile Include="PresentationLayer\AddNewHouse.aspx.cs">
+      <DependentUpon>AddNewHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddNewHouse.aspx.designer.cs">
+      <DependentUpon>AddNewHouse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\CrimeNearByStores.aspx.cs">
       <DependentUpon>CrimeNearByStores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,12 +128,33 @@
     <Compile Include="PresentationLayer\CrimeNearByStores.aspx.designer.cs">
       <DependentUpon>CrimeNearByStores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ManagerLandingPage.aspx.cs">
+      <DependentUpon>ManagerLandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ManagerLandingPage.aspx.designer.cs">
+      <DependentUpon>ManagerLandingPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\PublicPage.aspx.cs">
       <DependentUpon>PublicPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PresentationLayer\PublicPage.aspx.designer.cs">
       <DependentUpon>PublicPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\RemoveUsers.aspx.cs">
+      <DependentUpon>RemoveUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\RemoveUsers.aspx.designer.cs">
+      <DependentUpon>RemoveUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\StaffLandingPage.aspx.cs">
       <DependentUpon>StaffLandingPage.aspx</DependentUpon>
@@ -167,6 +200,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataAccessLayer\Database\" />
     <Folder Include="LocalComponentLayer\" />
     <Folder Include="PresentationLayer\assets\js\" />
   </ItemGroup>

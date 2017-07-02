@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StaffMembers>
+  <StaffMember role="manager">
+    <username>managerTest1</username>
+    <password>password</password>
+  </StaffMember>
+  <StaffMember role="manager">
+    <username>managerTest2</username>
+    <password>password</password>
+  </StaffMember>
+  <StaffMember role="clerk">
+    <username>clerkTest1</username>
+    <password>password</password>
+  </StaffMember>
+  <StaffMember role="clerk">
+    <username>clerkTest2</username>
+    <password>password</password>
+  </StaffMember>
+  <StaffMember role="clerk">
+    <username>clerkTest3</username>
+    <password>password</password>
+  </StaffMember>
+</StaffMembers>

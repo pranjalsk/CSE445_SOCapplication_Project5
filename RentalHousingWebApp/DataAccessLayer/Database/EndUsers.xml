@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EndUsers>
+  <EndUser isPasswordEncrypted="false">
+    <username>testUser1</username>
+    <password>password</password>
+    <firstname>test</firstname>
+    <lastname>user1</lastname>
+  </EndUser>
+  <EndUser isPasswordEncrypted="false">
+    <username>testUser2</username>
+    <password>password</password>
+    <firstname>test</firstname>
+    <lastname>user2</lastname>
+  </EndUser>
+  <EndUser isPasswordEncrypted="false">
+    <username>testUser3</username>
+    <password>password</password>
+    <firstname>test</firstname>
+    <lastname>User3</lastname>
+  </EndUser>
+</EndUsers>

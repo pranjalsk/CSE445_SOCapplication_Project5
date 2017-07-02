@@ -10,132 +10,96 @@
 namespace RentalHousingWebApp.PresentationLayer {
     
     
-    public partial class UserLoginPage {
+    public partial class AddNewHouse {
         
         /// <summary>
-        /// txt_userName control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_userName;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_password control.
+        /// txt_houseId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txt_password;
+        protected global::System.Web.UI.WebControls.TextBox txt_houseId;
         
         /// <summary>
-        /// btn_login control.
+        /// txt_houseName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_login;
+        protected global::System.Web.UI.WebControls.TextBox txt_houseName;
         
         /// <summary>
-        /// lbl_userLogin control.
+        /// txt_houseZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_userLogin;
+        protected global::System.Web.UI.WebControls.TextBox txt_houseZip;
         
         /// <summary>
-        /// txt_firstname control.
+        /// lbl_error_inputBoxes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_firstname;
+        protected global::System.Web.UI.WebControls.Label lbl_error_inputBoxes;
         
         /// <summary>
-        /// txt_lastname control.
+        /// btn_AddNow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_lastname;
+        protected global::System.Web.UI.WebControls.Button btn_AddNow;
         
         /// <summary>
-        /// txt_registerUsername control.
+        /// lbl_AdditionSuccessMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_registerUsername;
+        protected global::System.Web.UI.WebControls.Label lbl_AdditionSuccessMsg;
         
         /// <summary>
-        /// txt_registerPassword control.
+        /// txt_HousesAfterAddition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txt_registerPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txt_HousesAfterAddition;
         
         /// <summary>
-        /// btn_register control.
+        /// btn_logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_register;
+        protected global::System.Web.UI.WebControls.Button btn_logout;
         
         /// <summary>
-        /// lbl_registerUser control.
+        /// btn_landingPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_registerUser;
-        
-        /// <summary>
-        /// txt_staffUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_staffUsername;
-        
-        /// <summary>
-        /// txt_staffPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txt_staffPassword;
-        
-        /// <summary>
-        /// btn_StaffLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_StaffLogin;
-        
-        /// <summary>
-        /// lbl_StaffLoginLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_StaffLoginLabel;
+        protected global::System.Web.UI.WebControls.Button btn_landingPage;
     }
 }
