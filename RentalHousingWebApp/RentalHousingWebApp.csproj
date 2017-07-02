@@ -134,6 +134,7 @@
   <ItemGroup>
     <Compile Include="DataAccessLayer\StaffCredentials.cs" />
     <Compile Include="DataAccessLayer\UserCredentials.cs" />
+    <Compile Include="LocalComponentLayer\EncryptoDecrypto.cs" />
     <Compile Include="PresentationLayer\AddNewHouse.aspx.cs">
       <DependentUpon>AddNewHouse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,7 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccessLayer\Database\" />
-    <Folder Include="LocalComponentLayer\" />
     <Folder Include="PresentationLayer\assets\js\" />
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using RentalHousingWebApp.DataAccessLayer;
+using RentalHousingWebApp.LocalComponentLayer;
 using System.IO;
 
 namespace RentalHousingWebApp.PresentationLayer
@@ -13,6 +14,7 @@ namespace RentalHousingWebApp.PresentationLayer
     {
         UserCredentials ucd = new UserCredentials();
         StaffCredentials scd = new StaffCredentials();
+   
         imgServiceRef.ServiceClient myimgref = new imgServiceRef.ServiceClient();
         String myStr;
         protected void Page_Load(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace RentalHousingWebApp.PresentationLayer
                     lbl_userLogin.Text = "Login Successfull--" + result;
                     string[] tokens = result.Split(';');
                     Session["username"] = tokens[0];
-                    string passDecrpt = new EncryptoLibrary.CryptoClass().decrypto(tokens[1]);
+                    string passDecrpt = new EncryptoDecrypto().decrypto(tokens[1]);
                     Session["password"] = passDecrpt;
                     Session["role"] = "endUser";
                     Response.Redirect("UsersLandingPage.aspx");
@@ -73,7 +75,7 @@ namespace RentalHousingWebApp.PresentationLayer
 
         public string getUsers(string username, string password, bool isEncrypted) {         
                 string output = "";
-                string passEncrpt = new EncryptoLibrary.CryptoClass().encrypto(password);
+                string passEncrpt = new EncryptoDecrypto().encrypto(password);
                 List<string> result = ucd.readUser(username, passEncrpt, true);
                 foreach (string str in result)
                 {
@@ -96,12 +98,12 @@ namespace RentalHousingWebApp.PresentationLayer
                         string lastname = txt_lastname.Value.ToString();
                         string username = txt_registerUsername.Value.ToString();
                         string password = txt_registerPassword.Value.ToString();
-                        string passEncrp = new EncryptoLibrary.CryptoClass().encrypto(password);
+                        string passEncrp = new EncryptoDecrypto().encrypto(password);
                         bool isEncrypted = true;
                         bool done = ucd.addNewEndUser(firstname, lastname, username, passEncrp, isEncrypted);
                         if (done)
                         {
-                            lbl_registerUser.Text = "Registration successful, Please use details to log in!";
+                            lbl_registerUser.Text = "Registration successful, Please Log in!";
                         }    
                     }
                     else

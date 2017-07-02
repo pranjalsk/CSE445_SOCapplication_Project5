@@ -18,4 +18,16 @@
     <firstname>test</firstname>
     <lastname>User5</lastname>
   </EndUser>
+  <EndUser isPasswordEncrypted="true">
+    <username>testUser6</username>
+    <password>QpyZV3pGWcI=</password>
+    <firstname>test</firstname>
+    <lastname>User6</lastname>
+  </EndUser>
+  <EndUser isPasswordEncrypted="true">
+    <username>testUser7</username>
+    <password>wphKbxzZtwc=</password>
+    <firstname>test</firstname>
+    <lastname>User7</lastname>
+  </EndUser>
 </EndUsers>
