@@ -138,6 +138,32 @@ namespace RentalHousingWebApp.DataAccessLayer
         }
 
         /// <summary>
+        /// Read a particular user
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="isEncrypted"></param>
+        /// <returns></returns>
+        public List<string> readUserByName(string userName)
+        {
+            XDocument xmlDoc = XDocument.Load(path + @"\EndUsers.xml");
+            var elements = from elem in xmlDoc.Elements("EndUsers").Elements("EndUser")
+                           where elem != null
+                           select elem;
+
+            List<string> result = new List<string>();
+
+            foreach (var e in elements)
+            {
+                if (e.Element("username").Value.Equals(userName))
+                    result.Add(e.Element("username").Value + ";" + e.Element("password").Value);
+            }
+
+            return result;
+
+        }
+
+        /// <summary>
         /// Add new user
         /// </summary>
         /// <param name="firstname"></param>

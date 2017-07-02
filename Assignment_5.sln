@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalHousingWebApp", "Rent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptoLibrary", "EncryptoLibrary\EncryptoLibrary.csproj", "{7BDBAB3B-9325-428A-93DE-F808C75BA192}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPServices", "SOAPServices\SOAPServices.csproj", "{2BA666C3-E2E3-4683-BECE-CF1A8D82A540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryItPagesApplication", "TryItPagesApplication\TryItPagesApplication.csproj", "{71396381-14BC-411A-BA73-DCDE8D4B96AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7BDBAB3B-9325-428A-93DE-F808C75BA192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BDBAB3B-9325-428A-93DE-F808C75BA192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BDBAB3B-9325-428A-93DE-F808C75BA192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA666C3-E2E3-4683-BECE-CF1A8D82A540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA666C3-E2E3-4683-BECE-CF1A8D82A540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA666C3-E2E3-4683-BECE-CF1A8D82A540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA666C3-E2E3-4683-BECE-CF1A8D82A540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71396381-14BC-411A-BA73-DCDE8D4B96AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71396381-14BC-411A-BA73-DCDE8D4B96AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71396381-14BC-411A-BA73-DCDE8D4B96AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71396381-14BC-411A-BA73-DCDE8D4B96AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

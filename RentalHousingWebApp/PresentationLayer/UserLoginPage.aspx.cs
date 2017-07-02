@@ -79,13 +79,29 @@ namespace RentalHousingWebApp.PresentationLayer
                return output;
         }
 
+        public string getUsers1(string username)
+        {
+            string output = "";
+            List<string> result = ucd.readUserByName(username);
+            foreach (string str in result)
+            {
+                output += str;
+            }
+            return output;
+        }
+        bool ReturnValue()
+        {
+            return false;
+        }
+
         protected void btn_register_Click(object sender, EventArgs e)
         {
             if (txt_registerUsername.Value != null && txt_registerUsername.Value != "" && txt_registerPassword.Value != null && txt_registerPassword.Value != "")
             {
-                txt_staffUsername.Value = "";
-                List<string> result = ucd.readUser(txt_registerUsername.Value.ToString(), txt_registerPassword.Value.ToString(), false);
-                if (!result.Any())
+                string result = "";
+                result = getUsers1(txt_registerUsername.Value.ToString());
+               // List<string> result = ucd.readUser(txt_registerUsername.Value.ToString(), encpass, true);
+                if (result.Equals("") || result.Equals(null) || !result.Any())
                 {
                     if (imageVerifer())
                     {   //If non exisitng user, add new user
@@ -98,7 +114,9 @@ namespace RentalHousingWebApp.PresentationLayer
                         bool done = ucd.addNewEndUser(firstname, lastname, username, passEncrp, isEncrypted);
                         if (done)
                         {
-                            lbl_registerUser.Text = "Registration successful, Please Log in!";
+                            Response.Write("<script language='javascript'>alert('Registration Successful, Please Login');</script>");
+
+                            Server.Transfer("UserLoginPage.aspx", true);         
                         }    
                     }
                     else
