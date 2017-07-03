@@ -14,18 +14,20 @@ namespace RentalHousingWebApp.PresentationLayer
     {
         UserCredentials ucd = new UserCredentials();
         StaffCredentials scd = new StaffCredentials();
+        
         string path;
    
         imgServiceRef.ServiceClient myimgref = new imgServiceRef.ServiceClient();
         String myStr;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
           //  string path = HttpRuntime.AppDomainAppPath + "/DataAccessLayer/Database/"; 
             path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-
             Session["username"] = "";
             Session["password"] = "";
             Session["role"] = "";
+            img_captchImg.Visible = false;
             if (!IsPostBack && Session["IsAlreadyLoad"] == null)
             {
                 if (!File.Exists(path + @"\EndUsers.xml"))
@@ -36,13 +38,13 @@ namespace RentalHousingWebApp.PresentationLayer
                 {
                     scd.setupStaffDB();                
                 }
-                Session["IsAlreadyLoad"] = true;
                 myStr = myimgref.GetVerifierString("5");
                 Session["generatedString"] = myStr;
                 img_captchImg.Visible = true;
                 img_captchImg.ImageUrl = "http://neptune.fulton.ad.asu.edu/WSRepository/Services/ImageVerifier/Service.svc/GetImage/" + myStr;
+                Session["IsAlreadyLoad"] = true;        
             }
-        
+            
         }
 
         protected void btn_login_Click(object sender, EventArgs e)
@@ -89,21 +91,20 @@ namespace RentalHousingWebApp.PresentationLayer
             }
             return output;
         }
-        bool ReturnValue()
-        {
-            return false;
-        }
+    
 
         protected void btn_register_Click(object sender, EventArgs e)
         {
             if (txt_registerUsername.Value != null && txt_registerUsername.Value != "" && txt_registerPassword.Value != null && txt_registerPassword.Value != "")
             {
                 string result = "";
+                bool flag = false;
                 result = getUsers1(txt_registerUsername.Value.ToString());
                // List<string> result = ucd.readUser(txt_registerUsername.Value.ToString(), encpass, true);
                 if (result.Equals("") || result.Equals(null) || !result.Any())
                 {
-                    if (imageVerifer())
+                    flag = imageVerifer();
+                    if (flag)
                     {   //If non exisitng user, add new user
                         string firstname = txt_firstname.Value.ToString();
                         string lastname = txt_lastname.Value.ToString();
@@ -121,7 +122,8 @@ namespace RentalHousingWebApp.PresentationLayer
                     }
                     else
                     {
-                        lbl_registerUser.Text = "Please check captcha!";
+                        lbl_registerUser.Text = "You got wrong captcha! Click on new image";
+                        txt_imgText.Value = "";
                     }
 
                 }
@@ -171,7 +173,7 @@ namespace RentalHousingWebApp.PresentationLayer
         }
 
         public bool imageVerifer() {
-            if (Session["generatedString"].ToString().Equals(txt_imgText.Value.ToString()))
+            if (!string.IsNullOrEmpty(Session["generatedString"] as string) && Session["generatedString"].ToString().Equals(txt_imgText.Value.ToString()))
             {
                 return true;   
             }
